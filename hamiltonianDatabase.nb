@@ -1,0 +1,594 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     19519,        585]
+NotebookOptionsPosition[     18887,        558]
+NotebookOutlinePosition[     19236,        573]
+CellTagsIndexPosition[     19193,        570]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+List of Hamiltonians written using the secondQuant package\
+\>", "Section",
+ CellChangeTimes->{{3.594381356543405*^9, 3.594381367998913*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+1. AB2 with per plaquette flux and n.n. interaction\
+\>", "Subsection",
+ CellChangeTimes->{{3.594381383272277*^9, 3.594381385116519*^9}, {
+  3.5987726307165484`*^9, 3.5987726584965873`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"H", "[", "vector_", "]"}], "=", 
+   RowBox[{"Expand", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "t"}], " ", 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"k", "=", "0"}], 
+        RowBox[{"Nc", "-", "1"}]], 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"sigma", "=", "1"}], "1"], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["E", 
+            RowBox[{
+             RowBox[{"-", "I"}], " ", 
+             RowBox[{"flux", "/", "4"}]}]], " ", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "2"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "1"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}], "+", 
+          RowBox[{
+           SuperscriptBox["E", 
+            RowBox[{"+", 
+             FractionBox[
+              RowBox[{"I", " ", "flux"}], "4"]}]], " ", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "3"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "1"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}], "+", 
+          RowBox[{
+           SuperscriptBox["E", 
+            RowBox[{
+             RowBox[{"-", "I"}], " ", 
+             RowBox[{"flux", "/", "4"}]}]], " ", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "4"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "2"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}], "+", 
+          RowBox[{
+           SuperscriptBox["E", 
+            RowBox[{"+", 
+             FractionBox[
+              RowBox[{"I", " ", "flux"}], "4"]}]], " ", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "4"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "3"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}], "+", 
+          RowBox[{
+           SuperscriptBox["E", 
+            RowBox[{"+", 
+             FractionBox[
+              RowBox[{"I", " ", "flux"}], "4"]}]], " ", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "1"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "2"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}], "+", 
+          RowBox[{
+           SuperscriptBox["E", 
+            RowBox[{
+             RowBox[{"-", "I"}], " ", 
+             RowBox[{"flux", "/", "4"}]}]], " ", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "1"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "3"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}], "+", 
+          RowBox[{
+           SuperscriptBox["E", 
+            RowBox[{"+", 
+             FractionBox[
+              RowBox[{"I", " ", "flux"}], "4"]}]], " ", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "2"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "4"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}], "+", 
+          RowBox[{
+           SuperscriptBox["E", 
+            RowBox[{
+             RowBox[{"-", "I"}], " ", 
+             RowBox[{"flux", "/", "4"}]}]], " ", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "3"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "4"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}]}], ")"}]}]}]}], "+", 
+     RowBox[{"v", " ", 
+      RowBox[{"Sum", "[", " ", 
+       RowBox[{
+        RowBox[{"Sum", "[", " ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"n", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "1"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"n", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "2"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}], " ", "+", "  ", 
+           RowBox[{
+            RowBox[{"n", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "2"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"n", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "4"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"n", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "1"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"n", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "3"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"n", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "3"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"n", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "4"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"sigma", ",", "1", ",", "1"}], "}"}]}], "]"}], " ", ",", 
+        RowBox[{"{", 
+         RowBox[{"k", ",", "0", ",", 
+          RowBox[{"Nc", "-", "1"}]}], "}"}]}], "]"}]}]}], " ", "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.580038211854705*^9, 3.580038243216749*^9}, {
+  3.5800394363801966`*^9, 3.580039455412223*^9}, {3.5800400130670166`*^9, 
+  3.580040018077024*^9}, {3.5800401991562786`*^9, 3.580040201696282*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+2. AB2 with inner and outer flux and n.n. interaction\
+\>", "Subsection",
+ CellChangeTimes->{{3.594381390993556*^9, 3.594381393975911*^9}, {
+  3.5987726486965733`*^9, 3.598772671996606*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"H", "[", "vector_", "]"}], "=", 
+   RowBox[{"Expand", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "t"}], " ", 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"k", "=", "0"}], 
+        RowBox[{"Nc", "-", "1"}]], 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"sigma", "=", "1"}], "1"], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["E", 
+            RowBox[{
+             RowBox[{"-", "I"}], " ", 
+             RowBox[{"fluxO", "/", 
+              RowBox[{"(", 
+               RowBox[{"2", " ", "Nc"}], ")"}]}]}]], " ", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "2"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "1"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}], "+", 
+          RowBox[{
+           SuperscriptBox["E", 
+            RowBox[{
+             RowBox[{"-", "I"}], " ", 
+             RowBox[{"fluxI", "/", 
+              RowBox[{"(", 
+               RowBox[{"2", " ", "Nc"}], ")"}]}]}]], " ", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "3"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "1"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}], "+", 
+          RowBox[{
+           SuperscriptBox["E", 
+            RowBox[{
+             RowBox[{"-", "I"}], " ", 
+             RowBox[{"fluxO", "/", 
+              RowBox[{"(", 
+               RowBox[{"2", " ", "Nc"}], ")"}]}]}]], " ", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "4"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "2"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}], "+", 
+          RowBox[{
+           SuperscriptBox["E", 
+            RowBox[{
+             RowBox[{"-", "I"}], " ", 
+             RowBox[{"fluxI", "/", 
+              RowBox[{"(", 
+               RowBox[{"2", " ", "Nc"}], ")"}]}]}]], " ", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "4"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "3"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}], "+", 
+          RowBox[{
+           SuperscriptBox["E", 
+            RowBox[{
+             RowBox[{"-", " ", "fluxO"}], "/", 
+             RowBox[{"(", 
+              RowBox[{"2", " ", "Nc"}], ")"}]}]], " ", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "1"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "2"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}], "+", 
+          RowBox[{
+           SuperscriptBox["E", 
+            RowBox[{"I", " ", 
+             RowBox[{"fluxI", "/", 
+              RowBox[{"(", 
+               RowBox[{"2", " ", "Nc"}], ")"}]}]}]], " ", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "1"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "3"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}], "+", 
+          RowBox[{
+           SuperscriptBox["E", 
+            RowBox[{"I", " ", 
+             RowBox[{"fluxO", "/", 
+              RowBox[{"(", 
+               RowBox[{"2", " ", "Nc"}], ")"}]}]}]], " ", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "2"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "4"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}], "+", 
+          RowBox[{
+           SuperscriptBox["E", 
+            RowBox[{"I", " ", 
+             RowBox[{"fluxI", "/", 
+              RowBox[{"(", 
+               RowBox[{"2", " ", "Nc"}], ")"}]}]}]], " ", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "3"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "4"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}]}], ")"}]}]}]}], "+", 
+     RowBox[{"v", " ", 
+      RowBox[{"Sum", "[", " ", 
+       RowBox[{
+        RowBox[{"Sum", "[", " ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"n", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "1"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"n", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "2"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}], " ", "+", "  ", 
+           RowBox[{
+            RowBox[{"n", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "2"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"n", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "4"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"n", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "1"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"n", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "3"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"n", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"3", " ", "k"}], "+", "3"}], ",", "sigma"}], "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"n", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"3", " ", "k"}], "+", "4"}], ",", "sigma"}], "]"}], 
+             "[", "vector", "]"}], "]"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"sigma", ",", "1", ",", "1"}], "}"}]}], "]"}], " ", ",", 
+        RowBox[{"{", 
+         RowBox[{"k", ",", "0", ",", 
+          RowBox[{"Nc", "-", "1"}]}], "}"}]}], "]"}]}]}], " ", "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.580038211854705*^9, 3.580038243216749*^9}, {
+  3.5800394363801966`*^9, 3.580039455412223*^9}, {3.5800400130670166`*^9, 
+  3.580040018077024*^9}, {3.5800401991562786`*^9, 3.580040201696282*^9}, {
+  3.5943818813748837`*^9, 3.5943818933040752`*^9}, {3.594382014623084*^9, 
+  3.594382015074931*^9}, {3.594382161657419*^9, 3.5943821715860577`*^9}, {
+  3.594382214071381*^9, 3.59438221447288*^9}, {3.594382255123157*^9, 
+  3.594382302638159*^9}, {3.594382347278616*^9, 3.5943823623826847`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["3. Linear chain no interaction", "Subsection",
+ CellChangeTimes->{{3.594381397678959*^9, 3.5943813977983017`*^9}, {
+  3.5987727683267407`*^9, 3.5987727727267475`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"H", "[", "vector_", "]"}], "=", 
+   RowBox[{"Expand", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "t"}], " ", 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"k", "=", "1"}], "sites"], 
+       RowBox[{"(", 
+        RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{"sigma", "=", "1"}], "1"], 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{"k", ",", "sigma"}], "]"}], "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{
+               RowBox[{"k", "+", "1"}], ",", "sigma"}], "]"}], "[", "vector", 
+             "]"}], "]"}], "+", 
+           RowBox[{
+            RowBox[{"cdagger", "[", 
+             RowBox[{
+              RowBox[{"k", "+", "1"}], ",", "sigma"}], "]"}], "[", 
+            RowBox[{
+             RowBox[{"c", "[", 
+              RowBox[{"k", ",", "sigma"}], "]"}], "[", "vector", "]"}], 
+            "]"}]}], ")"}]}], ")"}]}]}], "+", 
+     RowBox[{"v", " ", 
+      RowBox[{"Sum", "[", 
+       RowBox[{
+        RowBox[{"Sum", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"n", "[", 
+            RowBox[{"k", ",", "sigma"}], "]"}], "[", 
+           RowBox[{
+            RowBox[{"n", "[", 
+             RowBox[{
+              RowBox[{"k", "+", "1"}], ",", "sigma"}], "]"}], "[", "vector", 
+            "]"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"sigma", ",", "1", ",", "1"}], "}"}]}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"k", ",", "1", ",", "sites"}], "}"}]}], "]"}]}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.598772778966756*^9, 3.598772795366779*^9}, {
+   3.601121341986579*^9, 3.6011214098834624`*^9}, {3.6011214470355873`*^9, 
+   3.601121448523672*^9}, 3.6011216376994925`*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{740, 867},
+WindowMargins->{{-1893, Automatic}, {Automatic, 102}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 151, 3, 113, "Section"],
+Cell[CellGroupData[{
+Cell[755, 29, 200, 4, 43, "Subsection"],
+Cell[958, 35, 7414, 215, 435, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8409, 255, 200, 4, 43, "Subsection"],
+Cell[8612, 261, 8179, 231, 384, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16828, 497, 173, 2, 43, "Subsection"],
+Cell[17004, 501, 1855, 53, 234, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
