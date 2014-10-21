@@ -1,4 +1,4 @@
-secondQuant v0.1 (30.06.2013)
+secondQuant v0.3 (25.08.2013)
 
 Copyright 2013 Alexandre Lopes <aalopes@ovi.com>
 

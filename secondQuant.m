@@ -3,7 +3,7 @@
 (* Mathematica Package *)
 (* secondQuant v .0.3 *)
 (* Created by Alexandre Miguel de Ara\[UAcute]jo Lopes,
-   Universit\[ADoubleDot]t Freiburg, 30/06/13 *)
+   Universit\[ADoubleDot]t Freiburg, 25/08/13 *)
 (* Some functions have been adapted from W. Kinzel, G. Reents, Physics by computer, Springer, 1996 *)
 
 
